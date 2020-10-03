@@ -14,7 +14,7 @@ jobs:
 
     - name: Set up git
       run: |
-        git remote add upstream ${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}.git
+        git remote add upstream "${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}.git"
         git config user.name rebase-bot
         git config user.email rebase-bot@github.com
 
