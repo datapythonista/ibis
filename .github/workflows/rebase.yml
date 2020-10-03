@@ -21,6 +21,9 @@ jobs:
     - name: Fetch upstream
       run: git fetch upstream
 
+    - name: Diff master
+      run: git diff upstream/master
+
     - name: Merge master
       run: git merge upstream/master
 
