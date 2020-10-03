@@ -14,9 +14,11 @@ jobs:
 
     - name: Set up git
       run: |
-        git remote add upstream "${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}.git"
+        git remote add upstream ${{ UPSTREAM_URL }}
         git config user.name rebase-bot
         git config user.email rebase-bot@github.com
+      env:
+        UPSTREAM_URL: "${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}.git"
 
     - name: Fetch upstream
       run: git fetch upstream
