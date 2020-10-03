@@ -18,6 +18,9 @@ jobs:
         git config user.name rebase-bot
         git config user.email rebase-bot@github.com
 
+    - name: Fetch upstream
+      run: git fetch upstream
+
     - name: Merge master
       run: git merge upstream/master
 
